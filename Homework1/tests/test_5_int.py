@@ -28,12 +28,12 @@ class TestList:
     def test_abs():
         """ Function to check getting of number module """
 
-        assert abs(-5) > 0
+        assert abs(-5) == 5
 
     @staticmethod
     @pytest.mark.parametrize('i', list(range(5)))
-    def test_less_10(i):
+    def test_not_equal_6(i):
         """ :param i: integer
-Parametrized test that checks number less 10.
+Parametrized test which checks that numbers aren't equal 6.
 """
-        assert i < 10
+        assert i != 6
